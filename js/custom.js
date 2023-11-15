@@ -42,4 +42,36 @@ $('.MainVisual .play').on('click', function() {
     
     });
 
+    // $('.stroy_slide').slick({
+    //     slidesToShow: 4,
+    //     // centerMode: true,
+    // })
+
+    $('.MainPortfolio .pf_left_slide').slick({
+        arrows:false,
+        fade: true,
+        asNavFor:'.MainPortfolio .pf_right_slide',
+    });
+
+    $('.MainPortfolio .pf_right_slide').slick({
+        arrows:false,
+        slidesToShow: 4,
+        asNavFor:'.MainPortfolio .pf_left_slide',
+    });
+
+    $('.MainPortfolio .bt_left').on('click', function(){
+        $('.MainPortfolio .pf_left_slide').slick('slickPrev');
+    })
+
+    $('.MainPortfolio .bt_right').on('click', function(){
+        $('.MainPortfolio .pf_left_slide').slick('slickNext');
+    })
+
+    $('.MainSolution .solution_slide').slick({
+        dots: true,
+        centerMode: true,
+        variableWidth: true,
+        
+
+    })
 });

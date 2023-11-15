@@ -203,6 +203,77 @@
 
 }
 
+.MainVisual .scroll {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    font-size: 12px;
+}
+
+/* before, after는 content가 무조건 따라와야함 */
+.MainVisual .scroll::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 50px;
+    background: #fff;
+
+}
+
+.MainVisual .scroll::after {
+    content: "";
+    position: absolute;
+    top:-60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+
+    animation: scroll 2s infinite;
+}
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 50px) scale(1.2);
+    }
+
+}
+
+.MainVisual .play {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    margin: 0 0 0 585px;
+    transform: translate(-100% , 0);
+
+    border: none;
+    outline: none;
+
+    /* transparent = 투명하게 */
+    background: transparent;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
 .MainVisual .play::after {
     content: "\ea3e";
     font-family: xeicon;
@@ -274,4 +345,229 @@
 .MainContent .content figure:hover img {
     transform: scale(1.2);
     transition: 0.2s;
+}
+
+.MainPortfolio {
+    background: url(../images/Main.jpg) repeat-x;
+}
+
+/* .MainStory .content .itm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+
+    transition: 0.2s ;
+}
+
+.MainStory .content .itm .case{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    height: 400px;
+    background: url(../images/MainVisual01.jpg) no-repeat center center/cover;
+    color: #fff;
+    padding: 32px;
+}
+
+.MainStory .stroy_slide {
+    display: flex;
+}
+
+.MainStory .stroy_slide>* {
+    flex: 1;
+
+}
+
+.MainStory .content .itm:hover {
+   flex:2;
+} */
+
+.MainPortfolio .Portfolio_inner {
+    display: flex;
+    gap: 50px;
+    width: calc((100% - 1200px) / 2 + 1200px);
+    margin: 0 0 0 auto;
+    padding: 0 0 0 15px;
+}
+
+.MainPortfolio .Portfolio_inner .left {
+
+    flex: 0 0 450px;
+    min-width: 0;
+}
+
+.MainPortfolio .Portfolio_inner .left figure{
+    padding: 0 50px 0 0;
+}
+
+.MainPortfolio .Portfolio_inner .right {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    order: 2;
+
+}
+
+.MainPortfolio .Portfolio_inner .pf_left_slide .img_box {
+    box-shadow: 10px 30px 30px rgba(0 ,0 ,0 ,0.3);
+    margin: 0 0 50px 0;
+    
+}
+
+.MainPortfolio .Portfolio_inner .pf_right_slide .img_box {
+    margin: 0 0 50px 0;
+}
+
+.MainPortfolio .Portfolio_inner .pf_right_slide figure {
+    margin: 0 30px 0 0;
+
+}
+
+.MainPortfolio .slide_box {
+    margin: auto 0 0 0;
+    width: calc(100% + 100px);
+}
+
+.MainPortfolio .title {
+    margin: 0 0 40px 0;
+    padding: 40px 0 0 0;
+    color: #fff;
+}
+
+.MainPortfolio .arrows {
+    display: flex;
+    align-self: flex-start;
+    
+    border: 1px solid #fff;
+}
+
+
+.MainPortfolio .arrows li~li {
+    border-left: 1px solid #fff;
+}
+
+.MainPortfolio .arrows button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+}
+
+.MainSolution .solution_slide figure {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 30px;
+    filter: grayscale(1) opacity(0.5);
+}
+
+.MainSolution .solution_slide figure.slick-current {
+    filter: grayscale(0) opacity(1);
+    transition: 0.5s 0.6s;
+
+}
+
+.MainSolution .solution_slide img {
+    margin: 0 auto;
+
+}
+
+.MainSolution .solution_slide .slick-arrow {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    font-size: 0;
+    width: 80px;
+    height: 40px;
+    border: none;
+
+    background: rgba(0,0,0,0.5);
+}
+
+.MainSolution .solution_slide .slick-prev {
+    margin: 0 0 0 -600px;
+}
+
+.MainSolution .solution_slide .slick-prev::before {
+    content: "";
+    position: absolute;
+    top:60%;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: #fff;
+
+}
+
+.MainSolution .solution_slide .slick-prev::after {
+    content: "";
+    position: absolute;
+    top:60%;
+    left: 20px;
+    width: 14px;
+    height: 1px;
+    background: #fff;
+    transform: rotate(-45deg);
+    transform-origin: left;
+}
+
+.MainSolution .solution_slide .slick-next {
+    margin: 0 0 0 600px;
+}
+
+.MainSolution .solution_slide .slick-next::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: #fff;
+}
+
+.MainSolution .solution_slide .slick-next::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 20px;
+    width: 14px;
+    height: 1px;
+    background: #fff;
+    transform: rotate(45deg);
+    transform-origin: right;
+}
+
+.MainSolution .solution_slide .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.MainSolution .solution_slide .slick-dots li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background: #ddd;
+}
+
+.MainSolution .solution_slide .slick-dots li.slick-active {
+    background: #008850;
+}
+
+.MainSolution .solution_slide .slick-dots li button {
+    display: none;
 }
