@@ -1,0 +1,13 @@
+
+
+/* 폰트 링크 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* 이미지 링크 */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* 폰트 스타일 바꿈 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #202124;
+}
+
