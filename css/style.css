@@ -461,6 +461,12 @@
     color: #fff;
 }
 
+.MainSolution {
+    position: relative;
+    background: #f9f9f9;
+    padding: 100px 0 140px 0;
+}
+
 .MainSolution .solution_slide figure {
     max-width: 1200px;
     width: 100%;
@@ -570,4 +576,127 @@
 
 .MainSolution .solution_slide .slick-dots li button {
     display: none;
+}
+
+.MainSolution .solusion_txt {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    margin: 0 0 0 -485px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+
+    }
+    .MainSolution .solusion_txt::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: -24px;
+        width: 48px;
+        height: 2px;
+        background: #008850;
+
+    }
+
+.MainSolution .solusion_txt {
+    padding: 40px;
+}
+
+.MainSolution .solusion_txt .txt_box li{
+    visibility: hidden;
+    height: 0;
+
+    
+
+}
+
+.MainSolution .solusion_txt .txt_box li h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.MainSolution .solusion_txt .txt_box li p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 32px 0;
+    height: 120px;
+
+}
+
+.MainSolution .solusion_txt .txt_box li.on {
+    visibility: visible;
+    height: auto;
+
+}
+
+.MainSolution .solution_idx {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    margin: 0 0 0 -445px;
+    font-size: 20px;
+}
+
+.MainSolution .solution_idx strong {
+    font-size: 32px;
+    font-weight: 500;
+    color: #008850;
+
+}
+
+/* .movie {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    
+} */
+
+.mainPromotion {
+    background: url(../images/MainPromosion01.jpg) no-repeat left bottom;
+
+}
+
+.mainPromotion .title {
+    text-align: center;
+
+}
+
+.mainPromotion .movie_case {
+    width: 800px;
+    height: calc(800px * 9 / 16);
+    background: tomato;
+    margin: 0 auto;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
+}
+
+.mainPromotion .movie_play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border: none;
+    background: transparent;
+    border: 4px solid #008850;
+    padding: 20px 22px;
+    font-size: 24px;
+    color: #008850;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mainPromotion .movie_play::before {
+    content: "\ea3e";
+    font-family: xeicon;
+
+}
+
+.mainPromotion .movie_play.on::before {
+    content: "\ea3b";
+
 }
